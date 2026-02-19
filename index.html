@@ -2,22 +2,29 @@
 <html>
 <head>
   <title>Email AI Agent Download</title>
+
   <style>
     body{
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       text-align:center;
       background:#0b0f19;
       color:white;
-      padding-top:80px;
+      padding-top:60px;
     }
+
     .box{
       background:#111827;
       padding:40px;
       border-radius:12px;
-      width:500px;
+      width:600px;
       margin:auto;
       box-shadow:0 0 30px rgba(0,0,0,0.5);
     }
+
+    h1{
+      margin-bottom:10px;
+    }
+
     a.button{
       display:inline-block;
       padding:15px 30px;
@@ -27,7 +34,28 @@
       border-radius:8px;
       text-decoration:none;
       margin-top:20px;
+      transition:0.3s;
     }
+
+    a.button:hover{
+      background:#16a34a;
+    }
+
+    .instructions{
+      text-align:left;
+      margin-top:40px;
+      font-size:15px;
+      line-height:1.6;
+      background:#0f172a;
+      padding:20px;
+      border-radius:8px;
+    }
+
+    .warning{
+      color:#f87171;
+      font-weight:bold;
+    }
+
   </style>
 </head>
 
@@ -37,20 +65,62 @@
   <h1>Email AI Agent</h1>
   <p>Download and install the Email Automation Agent</p>
 
-  <a class="button" href="https://github.com/writetokishoure-lang/email-ai-download/releases/latest/download/EmailAI_Setup.exe">
-  Download Installer
+  <a class="button" 
+     href="https://github.com/writetokishoure-lang/email-ai-download/releases/latest/download/EmailAI_Setup.exe">
+     Download Installer
   </a>
 
-  <p style="margin-top:20px;font-size:14px;">
-  After install:<br>
-  1. Install LibreOffice<br>
-  2. Add credentials.json<br>
-  3. Edit config.yaml<br>
-  4. Run EmailAgent
-  </p>
+  <div class="instructions">
+    <h3>📥 After Download & Install:</h3>
+
+    <ol>
+      <li><b>Install LibreOffice</b><br>
+          Required for document processing.<br>
+          Download from: https://www.libreoffice.org/download/
+      </li>
+
+      <br>
+
+      <li><b>Add your Google API credentials</b><br>
+          Place your <code>credentials.json</code> file inside:<br>
+          <code>C:\EmailAIAgent\</code>
+      </li>
+
+      <br>
+
+      <li><b>Edit config.yaml</b><br>
+          Open <code>C:\EmailAIAgent\config.yaml</code><br>
+          Add your Gemini API key and email settings.
+      </li>
+
+      <br>
+
+      <li><b>Run the Application</b><br>
+          Double-click <code>EmailAgent.exe</code><br>
+          First time it will open browser for Gmail authentication.
+      </li>
+    </ol>
+
+    <hr>
+
+    <h3>⚙ What Happens Next?</h3>
+    <ul>
+      <li>✔ The agent monitors your Gmail inbox</li>
+      <li>✔ It reads new emails</li>
+      <li>✔ Uses AI to generate response</li>
+      <li>✔ Automatically sends reply</li>
+    </ul>
+
+    <hr>
+
+    <p class="warning">
+      ⚠ Make sure your Google API quota is active.  
+      If you see "429 quota exceeded", wait or upgrade your API plan.
+    </p>
+
+  </div>
 
 </div>
 
 </body>
 </html>
-
